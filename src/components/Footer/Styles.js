@@ -10,3 +10,12 @@ export const BlueRectangle = styled.div`
     padding-left: 20px; /* Espaçamento da imagem à esquerda */
     position: relative; /* Garante que a imagem fique posicionada corretamente */
 `;
+
+export const Logo = styled.img`
+    width: 15vh;
+    position: absolute;
+    top: 45px;
+    left: 16px;
+    transform: translateY(-50%);
+    z-index: 1001;
+`;

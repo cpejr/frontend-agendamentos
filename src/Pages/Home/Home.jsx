@@ -1,11 +1,12 @@
-import { Container } from "./Styles";
-import { Carrossel } from "../../components";
+import { Container, ContainerCarousel } from "./Styles";
+import  DemoCarrossel  from "../../components/Carrossel/Carrossel";
 
 function Home (){
 
 return(
     <Container>
-        <Carrossel/>
+        
+        
     </Container>
 )
 }

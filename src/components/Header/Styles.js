@@ -32,7 +32,7 @@ export const NavLink = styled.a`
     transition: color 0.3s ease;
 
     &:hover {
-        color: #a0d8ff; /* Cor ao passar o mouse */
+        color:rgb(196, 228, 252); /* Cor ao passar o mouse */
     }
 `;
 

@@ -12,9 +12,10 @@ html{
 }
 body{
     font-family: 'Roboto', sans-serif;
-    font-size: 1.4rem;
-    background: black;
-    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: white;
+    color: #063D61;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }

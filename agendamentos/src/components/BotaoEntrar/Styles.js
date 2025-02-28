@@ -1,14 +1,18 @@
 import styled from "styled-components";
 
-export const StyleButton = styled.button`
+export const StyleBotaoEntrar = styled.button`
 
-    width: 35vh;
+    position: fixed;
+    right: 80px;
+    width: 17vh;
+    height: 6vh;
     padding: 9px 24px;
     font-size: 18px;
     font-weight: bold;
-    color: black;
+    color: white;
     background-color: #1884CA;
-    border-radius: 15px;
+    border-radius: 8px;
+    cursor: pointer;
     border: none;
     transition: background-color 0.3s ease;
     

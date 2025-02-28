@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const BlueRectangle = styled.div`
+    font-size: medium;
+    color: white;
     display: flex;
     height: 12vh;
     background-color: #0E5F94;

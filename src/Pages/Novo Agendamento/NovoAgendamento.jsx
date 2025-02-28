@@ -2,7 +2,7 @@ function NovoAgendamento (){
 
     return(
         <div>
-            PAGINA DE NOVO AGENDAMENTO
+            FAÇA UM NOVO AGENDAMENTO AQUI
         </div>
     )
     }

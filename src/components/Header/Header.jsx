@@ -12,7 +12,7 @@ export default function Header() {
             
             <NavLinks>
                 <NavLink href="/">Home</NavLink>
-                <NavLink href="novoagendamentos">Novo Agendamento</NavLink>
+                <NavLink href="novoagendamento">Novo Agendamento</NavLink>
                 <NavLink href="meusagendamentos">Meus Agendamentos</NavLink>
                 <NavLink href="creditos">Créditos</NavLink>
             </NavLinks>

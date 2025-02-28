@@ -1,10 +1,11 @@
 import { Container } from "./Styles";
+import { Carrossel } from "../../components";
 
 function Home (){
 
 return(
     <Container>
-        PAGINA HOME
+        <Carrossel/>
     </Container>
 )
 }

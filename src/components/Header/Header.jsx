@@ -1,5 +1,5 @@
 import BotaoEntrar from "../BotaoEntrar/BotaoEntrar";
-import { BlueRectangle, NavLinks, NavLink, Logo } from "./styles";
+import { BlueRectangle, NavLinks, NavLink, Logo } from "./Styles";
 import {useNavigate} from "react-router-dom";
 import React from 'react';
 import { figma, hello } from "../../Assets";

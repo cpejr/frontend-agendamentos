@@ -3,11 +3,14 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100vh;
-    flex-direction: column
-`
+    flex-direction: column;
+    padding: 20px; 
+`;
+
 export const Titulo = styled.h1`
-  margin-top: 6%;
+  margin-bottom: 3%;
   background: linear-gradient(to right, #f8d7ff, #a5d8ff);
   padding: 10px 20px;
   border-radius: 10px;
@@ -15,4 +18,6 @@ export const Titulo = styled.h1`
   display: inline-block;
   color: #1d3557;
   font-weight: bold;
+  text-align: center;
+
 `;

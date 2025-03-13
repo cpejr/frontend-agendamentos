@@ -1,7 +1,7 @@
 import { useState } from "react"; 
 import Input from "../Inputs/Inputs";
 import Button from "../BotaoConta/BotaoConta";
-import BotaoGoogle from "../BotaoGoogle/BotaoGoogle";
+import BotaoGoogle from "../ButtonGoogle/ButtonGoogle";
 import { ErrorMessage, FormContainer } from "./styles";
 
 const handleGoogleLogin = () => {

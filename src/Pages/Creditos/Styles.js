@@ -12,15 +12,17 @@ export const Content = styled.div`
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    min-height: 75vh;
+    height: auto;
+    gap: 40px;
+    margin: 40px 0 40px 0;
 `;
 
 export const Titulos = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 370px;
-    height: 90px;
+    width: 320px;
+    height: 70px;
     border-radius: 21px;
     border: solid 10px #E0EEFFDB;
     background: rgb(167,206,253);
@@ -28,7 +30,7 @@ export const Titulos = styled.div`
 `;
 
 export const TextoTitulo = styled.h1`
-    font-size: 36px;
+    font-size: 28px;
     color: #063D61;
 `;
 
@@ -37,8 +39,8 @@ export const Saldo = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 370px;
-    height: 141px;
+    width: 320px;
+    height: 120px;
     border-radius: 33px;
     background-color: #FFF59BDB;
     gap: 14px;
@@ -61,7 +63,16 @@ export const ContentComprar = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    gap: 12px;
+    gap: 40px;
+
+    @media (max-width: 1025px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 500px) {
+        gap: 20px;
+    }
 `
 
 export const BotaoCredito = styled.button`
@@ -72,8 +83,8 @@ export const BotaoCredito = styled.button`
     gap: 10px;
     background: #FFF59B;
     border-radius: 21px;
-    width: 260px;
-    height: 260px;
+    width: 220px;
+    height: 220px;
     text-align: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -84,11 +95,30 @@ export const BotaoCredito = styled.button`
     &:hover {
         transform: scale(1.05);
     }
+
+    @media (max-width: 500px) {
+        height: 160px;
+        width: 160px;
+    }
 `;
 
 export const Icone = styled.img`
-    height: 128px;
-    width: 128px;
+    height: 100px;
+    width: 100px;
+
+    @media (max-width: 500px) {
+        height: 60px;
+        width: 60px;
+    }
+`;
+
+export const TextoCompra = styled.p`
+    color: #FFA600;
+    font-size: 28px;
+
+    @media (max-width: 500px) {
+        font-size: 22px;
+    }
 `;
 
 export const Preco = styled.p`

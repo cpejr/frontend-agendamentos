@@ -9,6 +9,7 @@ import {
     BotaoCredito,
     Icone,
     Preco,
+    TextoCompra,
     ContentComprar,
 
 }from "./Styles";
@@ -48,14 +49,14 @@ return(
                 </Saldo>
                 <Extrato href="/" >Ver Extrato &gt;</Extrato>
             </div>
-            <Titulos style={{width: "460px"}}>
+            <Titulos>
                 <TextoTitulo>Comprar Créditos</TextoTitulo>
             </Titulos>
             <ContentComprar>
                 {creditos.map((credito) => (
                         <BotaoCredito key={credito.id}>
-                            <img src={credito.icone} alt={`Ícone de ${credito.valor} créditos`} width="100px" height="100px" />
-                            <TextoSaldo>{credito.valor} Créditos</TextoSaldo>
+                            <Icone src={credito.icone} alt={`Ícone de ${credito.valor} créditos`} width="100px" height="100px" />
+                            <TextoCompra>{credito.valor} Créditos</TextoCompra>
                             <Preco>R$ {credito.preco}</Preco>
                         </BotaoCredito>
                 ))}

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Input from "../Inputs/Inputs";
 import Button from "../BotaoConta/BotaoConta";
 import BotaoGoogle from "../ButtonGoogle/ButtonGoogle";
-import { ErrorMessage, FormContainer } from "./styles";
+import { ErrorMessage, FormContainer, divButton } from "./styles";
 
 const handleGoogleLogin = () => {
     alert("Login com Google ainda não implementado!");
@@ -29,6 +29,8 @@ export default function FormCadrasto() {
     setError(""); 
     setFormData({ name: "", email: "", password: "", confirmPassword: "" }); 
   };
+  
+  
 
   return (
     <FormContainer onSubmit={handleSubmit}>
@@ -37,9 +39,9 @@ export default function FormCadrasto() {
       <Input type="password" name="password" placeholder="Senha" value={formData.password} onChange={handleChange} required />
       <Input type="password" name="confirmPassword" placeholder="Confirme a Senha" value={formData.confirmPassword} onChange={handleChange} required />
       {error && <ErrorMessage>{error}</ErrorMessage>}
-      <div>
-      <BotaoGoogle onClick={handleGoogleLogin} />
-     </div>
+      <divButton>
+      <BotaoGoogle onClick={handleGoogleLogin} text="Cadastar com o Google"/>
+     </divButton>
       <Button type="submit">CADASTRAR</Button>
     </FormContainer>
   );

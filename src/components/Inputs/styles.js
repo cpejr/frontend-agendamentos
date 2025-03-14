@@ -11,4 +11,5 @@ export const StyledInput = styled.input`
   outline: none;
   margin-top:4%;
   border-color:blue;
+  box-sizing: border-box;
 `;

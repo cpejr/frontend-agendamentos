@@ -1,9 +1,13 @@
-function Login (){
+import { Container, Titulo } from "./Styles";
+import FormLogin from "../../components/FormLogin/FormLogin";
 
-    return(
-        <div>
-            PAGINA DE LOGIN
-        </div>
-    )
-    }
+function Login() {
+    return (
+        <Container>
+            <Titulo>ACESSAR CONTA</Titulo>
+            <FormLogin />
+        </Container>
+    );
+}
+
 export default Login;

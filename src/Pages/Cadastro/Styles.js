@@ -7,7 +7,7 @@ export const Container = styled.div`
     flex-direction: column
 `
 export const Titulo = styled.h1`
-  margin-top: 6%;
+  margin-top: 2%;
   background: linear-gradient(to right, #f8d7ff, #a5d8ff);
   padding: 10px 20px;
   border-radius: 10px;
@@ -15,4 +15,8 @@ export const Titulo = styled.h1`
   display: inline-block;
   color: #1d3557;
   font-weight: bold;
+`;
+
+export const P = styled.p`
+  margin-top: 1%;
 `;

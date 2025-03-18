@@ -18,7 +18,6 @@ export const GoogleButton = styled.button`
   max-width: 70%;
   margin: 0 auto;
   margin-top: 6%;
-
   &:hover {
     background-color: #f8d7ff;
     border-color: #a5d8ff;

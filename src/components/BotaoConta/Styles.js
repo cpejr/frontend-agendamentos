@@ -10,7 +10,7 @@ export const StyledButton = styled.button`
   font-weight: bold;
   cursor: pointer;
   justify-content:center;
-  margin-top:4%;
+  margin-top:0%;
 `;
 
 export const ButtonContainer = styled.div`

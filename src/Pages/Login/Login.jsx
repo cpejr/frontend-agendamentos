@@ -1,11 +1,11 @@
-import { Container, Titulo } from "./Styles";
-import FormLogin from "../../components/FormLogin/FormLogin";
+import { Container, Title } from "./Styles";
+import AuthForm from "../../components/features/Authform/Authform";
 
 function Login() {
     return (
         <Container>
-            <Titulo>ACESSAR CONTA</Titulo>
-            <FormLogin />
+            <Title>ACESSAR CONTA</Title>
+            <AuthForm isRegister={false} />
         </Container>
     );
 }

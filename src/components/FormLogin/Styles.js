@@ -10,3 +10,14 @@ export const ErrorMessage = styled.p`
   text-align: center;
   margin-top: 10px;
 `;
+
+export const InputWrapper = styled.div`
+  position: relative;
+  width: 100%;
+`;
+
+export const IconWrapper = styled.div`
+  position: absolute;
+  top: 45%;
+  right: 14%;
+`;

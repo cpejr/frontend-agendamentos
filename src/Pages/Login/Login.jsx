@@ -1,12 +1,12 @@
-import { Container, Titulo, P} from "./Styles";
-import FormLogin from "../../components/FormLogin/FormLogin";
+import { Container, Title, P } from "./Styles";
+import AuthForm from "../../components/features/Authform/Authform";
 
 function Login() {
     return (
         <Container>
-            <Titulo>ACESSAR CONTA</Titulo>
-            <FormLogin />
-            <P> Não possui uma conta? <a href="/cadastro">Crie sua conta aqui</a></P>
+            <Title>ACESSAR CONTA</Title>
+            <AuthForm isRegister={false} />
+            <P> Não tem uma conta? <a href="/register">Crie sua conta aqui</a></P>         
         </Container>
     );
 }

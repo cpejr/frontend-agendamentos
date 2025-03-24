@@ -13,18 +13,17 @@ export const TituloSecao = styled.h2`
 `;
 
 export const ContainerCategoria = styled.div`
-    position: fixed;
+    position: absolute;
     bottom: 14vh; /* Fica acima da header */
     left: 10px; /* Ajuste a posição no canto esquerdo */
     width: 50%; /* Largura da div retangular */
     height: auto;
-    background-color: white; /* Azul semi-transparente */
     padding: 10px;
     border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colunas */
     gap: 10px; /* Espaço entre os botões */
-    row-gap: 30px; /* Adiciona espaço extra entre as linhas */
+    row-gap: 20px; /* Adiciona espaço extra entre as linhas */
     z-index: 999; /* Fica acima da header */
     text-align: center;
 `;

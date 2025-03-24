@@ -6,3 +6,5 @@ export {default as Categorias} from "./Categorias/Categorias";
 export {default as Profissionais} from "./Profissionais/Profissionais";
 export {default as BotaoCategoria} from "./BotaoCategoria/BotaoCategoria";
 export {default as BotaoProfissional} from "./BotaoProfissional/BotaoProfissional";
+export {default as Titulo} from "./Titulo/Titulo";
+export {default as TituloProfissionais} from "./TituloProfissionais/TituloProfissionais";

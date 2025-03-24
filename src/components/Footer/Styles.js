@@ -19,3 +19,13 @@ export const Logo = styled.img`
     transform: translateY(-50%);
     z-index: 1001;
 `;
+
+export const Contato = styled.text`
+    font-size: 15px;
+    color: white;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 12vh;
+    margin-left: 90%;
+`;

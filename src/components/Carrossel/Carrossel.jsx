@@ -1,24 +1,34 @@
-import { Carousel } from "react-responsive-carousel";
+import React from "react";
+import Slider from "react-slick";
 import { StyledImage } from "./Styles";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import { hello } from "../../Assets";
 
-export default function DemoCarrossel() {
+const Carrossel = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
-    <Carousel
-      showThumbs={false}
-      showStatus={false}
-      autoPlay={true}
-      interval={6000}
-      infiniteLoop={true}
-      dynamicHeight={false}
-    >
-
-      <StyledImage src="src\Assets\hello.jpg" alt="slide 1" />
-
-      <StyledImage src="src\Assets\hello.jpg" alt="slide 2" />
-
-      <StyledImage src="src\Assets\hello.jpg" alt="slide 3" />
-
-    </Carousel>
+    <div style={{ width: "70%", height: "100%", marginTop: "25px", overflow: "hidden" }}>
+      <Slider {...settings}>
+        <div>
+          <StyledImage src= {hello} alt="slide 1" />
+        </div>
+        <div>
+          <StyledImage src= {hello} alt="slide 2" />
+        </div>
+        <div>
+          <StyledImage src= {hello} alt="slide 3" />
+        </div>
+      </Slider>
+    </div>
   );
-}
+};
+
+export default Carrossel;

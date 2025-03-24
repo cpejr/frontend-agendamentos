@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerProfissional = styled.div`
-    position: fixed;
+    position: absolute;
     bottom: 14vh; /* Fica acima da header */
     left: 52%; /* Posiciona ao lado das categorias */
     width: 50%; /* Largura da div retangular */
@@ -12,7 +12,7 @@ export const ContainerProfissional = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colunas */
     gap: 10px; /* Espaço entre os botões */
-    row-gap: 30px; /* Adiciona espaço extra entre as linhas */
+    row-gap: 20px; /* Adiciona espaço extra entre as linhas */
     z-index: 999; /* Fica acima da header */
     text-align: center;
 `;

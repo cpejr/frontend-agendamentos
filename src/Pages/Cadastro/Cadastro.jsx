@@ -1,10 +1,13 @@
-import { Container } from "./Styles";
+import { Container, Titulo } from "./Styles";
+import FormCadrasto from "../../components/FormCadrasto/formCadrasto";
 
-function Cadastro (){
-    return(
+function Cadastro() {
+    return (
         <Container>
-            FAÇA SEU CADASTRO AQUI
+            <Titulo>CRIAR CONTA</Titulo>
+            <FormCadrasto />
         </Container>
-    )
+    );
 }
+
 export default Cadastro;

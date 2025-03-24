@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 
 export const FormContainer = styled.form`
+width: 600px;
+height: auto;
 `;
 
 export const InputWrapper = styled.div`

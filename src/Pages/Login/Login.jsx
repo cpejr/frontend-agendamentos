@@ -1,11 +1,13 @@
-import { Container, Title, P } from "./Styles";
+import { Container, Title, P, ConteinerForm } from "./Styles";
 import AuthForm from "../../components/features/Authform/Authform";
 
 function Login() {
     return (
         <Container>
             <Title>ACESSAR CONTA</Title>
-            <AuthForm isRegister={false} />
+            <ConteinerForm> 
+                  <AuthForm isRegister={false} />
+            </ConteinerForm>
             <P> Não tem uma conta? <a href="/register">Crie sua conta aqui</a></P>         
         </Container>
     );

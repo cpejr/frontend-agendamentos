@@ -9,6 +9,7 @@ const handleGoogleLogin = () => {
     alert("Login com Google ainda não implementado!");
 };
 
+
 export default function AuthForm({ isRegister }) {
     const [formData, setFormData] = useState({
         name: "",
@@ -97,7 +98,7 @@ export default function AuthForm({ isRegister }) {
                 {error && <ErrorMessage>{error}</ErrorMessage>}
             </InputWrapper>
             <divButton>
-                <BotaoGoogle onClick={handleGoogleLogin} text={isRegister ? "Cadastrar com o Google" : "Fazer Login com o Google"} />
+                <BotaoGoogle onClick={handleGoogleLogin} text={isRegister ? "Cadastrar com o Google" : "Logar com o Google"} />
             </divButton>
             <Button type="submit">{isRegister ? "CADASTRAR" : "ENTRAR"}</Button>
         </FormContainer>

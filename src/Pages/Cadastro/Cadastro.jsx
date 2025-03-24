@@ -1,4 +1,4 @@
-import { Container, Titulo } from "./Styles";
+import { Container, Titulo, P} from "./Styles";
 import FormCadrasto from "../../components/FormCadrasto/formCadrasto";
 
 function Cadastro() {
@@ -6,6 +6,7 @@ function Cadastro() {
         <Container>
             <Titulo>CRIAR CONTA</Titulo>
             <FormCadrasto />
+            <P> Ja tem uma conta? <a href="/login">Acesse sua conta aqui</a></P>
         </Container>
     );
 }

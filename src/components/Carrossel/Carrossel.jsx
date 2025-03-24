@@ -7,6 +7,7 @@ import { hello } from "../../Assets";
 
 const Carrossel = () => {
   const settings = {
+    
     dots: true,
     infinite: true,
     speed: 500,
@@ -15,7 +16,7 @@ const Carrossel = () => {
   };
 
   return (
-    <div style={{ width: "70%", height: "100%", marginTop: "25px", overflow: "hidden" }}>
+    <div style={{ width: "35%", height: "100%", marginTop: "50px", overflow: "hidden" }}>
       <Slider {...settings}>
         <div>
           <StyledImage src= {hello} alt="slide 1" />

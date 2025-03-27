@@ -20,3 +20,10 @@ export const Title = styled.h1`
 export const P = styled.p`
   margin-top: 1%;
 `;
+
+export const IconWrapper1 = styled.div`
+  position:relative;
+`;
+
+export const InputWrapper = styled.div`
+`;

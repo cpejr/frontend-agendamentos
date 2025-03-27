@@ -2,18 +2,30 @@ import styled from "styled-components";
 
 
 export const FormContainer = styled.form`
+ align-items:center;
+ display:flex;
+ flex-direction: column;
+ width:60%
 `;
 
 export const InputWrapper = styled.div`
   position: relative;
-  width: 100%;
+  width:100%;
 `;
 
 export const IconWrapper1 = styled.div`
   position: absolute;
-  top: 65%;
-  right: 12%;
+  right: 11%;   /* Ajusta para o canto direito */
+  top: 75%;
+  transform: translateY(-50%);  /* Centraliza verticalmente */
+  cursor: pointer;
+  color: #666;
+
+  &:hover {
+    color: #007bff;
+  }
 `;
+
 
 export const IconWrapper3 = styled.div`
   position: absolute;
@@ -38,5 +50,7 @@ export const ErrorMessage = styled.p`
   font-size: 14px;
   font-weight: bold;
   text-align: center;
-  margin-top: 10px;
+  position: absolute;
+  margin-top:5px;
+  left:30%;
 `;

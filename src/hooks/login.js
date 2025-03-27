@@ -1,5 +1,5 @@
 import { useQuery, useMutation } from "@tanstack/react-query";
-import { login } from "../../services/endpoints";
+import { login } from "../services/endpoints";
 
 export function useLogin({
     onSuccess = () => {},
@@ -12,8 +12,5 @@ export function useLogin({
     });
   }
 
-  return useQuery({
-    onError,
-    onSuccess
-  });
+ 
 

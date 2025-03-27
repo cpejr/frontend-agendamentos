@@ -14,23 +14,21 @@ export const GoogleButton = styled.button`
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  width: 90%;
-  max-width: 70%;
+  width: 40%;
   margin: 0 auto;
-  margin-top: 6%;
+  margin-top: 3%;
   &:hover {
     background-color: #f8d7ff;
     border-color: #a5d8ff;
   }
 
   img {
-    width: 12%;
+    width: 25%;
     max-width: 32px; /* Para evitar que fique muito pequeno */
     height: auto;
+    flex-shrink: 0; 
   }
-
-  @media (max-width: 480px) {
-    font-size: 6rem;
-    padding: 3% 5%;
+  @media (max-width: 510px) {
+    width: 150px;
   }
 `;

@@ -1,16 +1,16 @@
 import { 
     Container,
     Content,
-    Titulos,
-    TextoTitulo,
-    Saldo,
-    TextoSaldo,
-    Extrato,
-    BotaoCredito,
-    Icone,
-    Preco,
-    TextoCompra,
-    ContentComprar,
+    Titles,
+    TextTitle,
+    Balance,
+    TextBalance,
+    Statement,
+    ButtonCredit,
+    Icon,
+    Price,
+    TextBuy,
+    ContentBuy,
 
 }from "./Styles";
 
@@ -23,10 +23,10 @@ import {
  } from "../../Assets";
 
  const creditos = [
-    { id: 1, valor: 50, preco: 15, icone: Dollar},
-    { id: 2, valor: 100, preco: 25, icone: Coin},
-    { id: 3, valor: 200, preco: 50, icone: Coin2},
-    { id: 4, valor: 500, preco: 100, icone: MoneyBag}
+    { id: 1, valor: 50, price: 15, icon: Dollar},
+    { id: 2, valor: 100, price: 25, icon: Coin},
+    { id: 3, valor: 200, price: 50, icon: Coin2},
+    { id: 4, valor: 500, price: 100, icon: MoneyBag}
 ];
 
 
@@ -35,34 +35,34 @@ function Creditos (){
     
 return(
     <Container>
-        <Content>
-            <Titulos>
-                <TextoTitulo>Meus Créditos</TextoTitulo>
-            </Titulos>
-            <div style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", gap: "12px"}}>
-                <Saldo>
-                    <p style={{color: "#063D61", fontSize: "28px"}}>Saldo Disponível</p>
-                    <div style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "row", gap: "8px"}}>
-                        <img src={Dollar} alt="" />
-                        <TextoSaldo>9999</TextoSaldo>
-                    </div>
-                </Saldo>
-                <Extrato href="/" >Ver Extrato &gt;</Extrato>
-            </div>
-            <Titulos>
-                <TextoTitulo>Comprar Créditos</TextoTitulo>
-            </Titulos>
-            <ContentComprar>
-                {creditos.map((credito) => (
-                        <BotaoCredito key={credito.id}>
-                            <Icone src={credito.icone} alt={`Ícone de ${credito.valor} créditos`} width="100px" height="100px" />
-                            <TextoCompra>{credito.valor} Créditos</TextoCompra>
-                            <Preco>R$ {credito.preco}</Preco>
-                        </BotaoCredito>
-                ))}
-            </ContentComprar>
-        </Content>
-    </Container>
+            <Content>
+                <Titles>
+                    <TextTitle>Meus Créditos</TextTitle>
+                </Titles>
+                <div style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", gap: "12px"}}>
+                    <Balance>
+                        <p style={{color: "#063D61", fontSize: "28px"}}>Saldo Disponível</p>
+                        <div style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "row", gap: "8px"}}>
+                            <img src={Dollar} alt="" />
+                            <TextBalance>9999</TextBalance>
+                        </div>
+                    </Balance>
+                    <Statement onClick={() => navigate("/")}>Ver Extrato &gt;</Statement>
+                </div>
+                <Titles>
+                    <TextTitle>Comprar Créditos</TextTitle>
+                </Titles>
+                <ContentBuy>
+                    {creditos.map((credito) => (
+                        <ButtonCredit key={credito.id}>
+                            <Icon src={credito.icon} alt={`Ícone de ${credito.valor} créditos`} width="100px" height="100px" />
+                            <TextBuy>{credito.valor} Créditos</TextBuy>
+                            <Price>R$ {credito.price}</Price>
+                        </ButtonCredit>
+                    ))}
+                </ContentBuy>
+            </Content>
+        </Container>
 )
 }
 

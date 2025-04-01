@@ -17,7 +17,7 @@ export const Content = styled.div`
     margin: 40px 0 40px 0;
 `;
 
-export const Titulos = styled.div`
+export const Titles = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,12 +29,12 @@ export const Titulos = styled.div`
     background: linear-gradient(90deg, rgba(167,206,253,1) 0%, rgba(255,245,155,1) 100%);
 `;
 
-export const TextoTitulo = styled.h1`
+export const TextTitle = styled.h1`
     font-size: 28px;
     color: #063D61;
 `;
 
-export const Saldo = styled.div`
+export const Balance = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,19 +46,19 @@ export const Saldo = styled.div`
     gap: 14px;
 `;
 
-export const TextoSaldo = styled.p`
+export const TextBalance = styled.p`
     color: #FFA600;
     font-size: 28px;
 `;
 
-export const Extrato = styled.a`
+export const Statement = styled.a`
     color: #CECECE;
     font-size: 22px;
     cursor: pointer;
     text-decoration: none;
 `;
 
-export const ContentComprar = styled.div`
+export const ContentBuy = styled.div`
     display: flex; 
     justify-content: center;
     flex-wrap: wrap;
@@ -75,7 +75,7 @@ export const ContentComprar = styled.div`
     }
 `
 
-export const BotaoCredito = styled.button`
+export const ButtonCredit = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,7 +102,7 @@ export const BotaoCredito = styled.button`
     }
 `;
 
-export const Icone = styled.img`
+export const Icon = styled.img`
     height: 100px;
     width: 100px;
 
@@ -112,7 +112,7 @@ export const Icone = styled.img`
     }
 `;
 
-export const TextoCompra = styled.p`
+export const TextBuy = styled.p`
     color: #FFA600;
     font-size: 28px;
 
@@ -121,7 +121,7 @@ export const TextoCompra = styled.p`
     }
 `;
 
-export const Preco = styled.p`
+export const Price = styled.p`
     font-size: 22px;
     color: #063D61;
 `;

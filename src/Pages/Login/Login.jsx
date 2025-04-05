@@ -1,14 +1,9 @@
 import { useLogin } from "../../hooks/login";
 import FormSubmit from "../../components/features/FormSubmit/FormSubmit";
-import { z } from "zod";
 import { Title, Container, P } from "./Styles";
 import ButtonEnter from "../../components/commons/ButtonCount/ButtonCount";
 import ButtonGoogle from "../../components/commons/ButtonGoogle/ButtonGoogle";
-
-const schema = z.object({
-    email: z.string().email("E-mail inválido"),
-    password: z.string().min(6, "A senha deve ter pelo menos 6 caracteres"),
-});
+import { loginSchema } from "./utils";
 
 export default function LoginPage() {
     const { mutate: loginUser, isLoading, error } = useLogin({
@@ -36,7 +31,7 @@ export default function LoginPage() {
     return (
         <Container>
             <Title>Acessar Conta</Title>
-            <FormSubmit inputs={inputs} onSubmit={handleLogin} schema={schema}>
+            <FormSubmit inputs={inputs} onSubmit={handleLogin} schema={loginSchema}>
             {error && <p style={{ color: "red" }}>{error.message}</p>}
                     <ButtonEnter type="submit" disabled={isLoading}>
                         {isLoading ? "Carregando..." : "Entrar"}

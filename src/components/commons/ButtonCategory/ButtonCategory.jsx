@@ -1,4 +1,5 @@
 import { StyledButtonCategory } from "./Styles";
+import PropTypes from 'prop-types';
 
 function ButtonCategory({children, onClick}) {
     return (
@@ -8,4 +9,8 @@ function ButtonCategory({children, onClick}) {
     );
 }
 
+ButtonCategory.propTypes = {
+    children: PropTypes.node.isRequired,
+    onClick: PropTypes.func.isRequired,
+};
 export default ButtonCategory;

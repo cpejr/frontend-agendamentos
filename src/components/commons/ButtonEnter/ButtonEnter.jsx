@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { StyledButtonEnter } from "./Styles";
 
-function ButtonEnter({children, onClick}) {
+export default function ButtonEnter({children, onClick}) {
     return (
             <StyledButtonEnter onClick={onClick}>
                 {children}
@@ -13,4 +13,3 @@ ButtonEnter.propTypes = {
     onClick: PropTypes.func.isRequired,  
 };
 
-export default ButtonEnter;

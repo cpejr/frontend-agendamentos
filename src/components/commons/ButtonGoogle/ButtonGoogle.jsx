@@ -2,7 +2,7 @@ import { Styled } from "./Styles";
 import googleIcon from "../../../Assets/googleicon.png";
 import PropTypes from "prop-types";
 
-function ButtonGoogle({ onClick, action = "login" }) {
+export default function ButtonGoogle({ onClick, action = "login" }) {
   const buttonTexts = {
     login: "Entrar com Google",
     register: "Cadastrar com Google",
@@ -23,11 +23,3 @@ ButtonGoogle.propTypes = {
   imgSrc: PropTypes.string,
   imgAlt: PropTypes.string,
 };
-
-ButtonGoogle.defaultProps = {
-  action: "login",
-  imgSrc: googleIcon,
-  imgAlt: "Google Logo",
-};
-
-export default ButtonGoogle;

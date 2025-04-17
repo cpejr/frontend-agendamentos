@@ -1,8 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { StyledInput } from "./styles";
 
-const Inputs = ({ type = "text", placeholder, ...props }) => {
+export default function Inputs({ type = "text", placeholder, ...props }) {
   return <StyledInput type={type} placeholder={placeholder} {...props} />;
-};
+}
 
-export default Inputs;
+Inputs.propTypes = {
+  type: PropTypes.string,
+  placeholder: PropTypes.string,
+};

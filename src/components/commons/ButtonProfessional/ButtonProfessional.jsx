@@ -1,28 +1,17 @@
 import PropTypes from 'prop-types';
 import { StyledProfessionalButton } from "./Styles";
 
-const ButtonProfessional = ({ children, onClick, className, style }) => {
+export default function ButtonProfessional({ children, onClick, style }) {
   return (
-    <StyledProfessionalButton 
-      onClick={onClick}
-      className={className}
-      style={style}
-    >
+    <StyledProfessionalButton onClick={onClick} style={style}>
       {children}
     </StyledProfessionalButton>
   );
-};
+}
+
 
 ButtonProfessional.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
-  className: PropTypes.string,
   style: PropTypes.object,
 };
-
-ButtonProfessional.defaultProps = {
-  className: '',
-  style: {},
-};
-
-export default ButtonProfessional;

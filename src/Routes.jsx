@@ -10,9 +10,11 @@ import {
   Cadastro,
   Home,
   Creditos,
+  Contato,
+  Faq,
+  SobreNos,
   NovoAgendamento,
   MeusAgendamentos,
-  Contato,
 } from "./Pages";
 import AppLayout from "./Layouts/AppLayout/AppLayout";
 
@@ -26,6 +28,9 @@ const router = createBrowserRouter(
         <Route path="novoagendamento" element={<NovoAgendamento />} />
         <Route path="meusagendamentos" element={<MeusAgendamentos />} />
         <Route path="creditos" element={<Creditos />} />
+        <Route path="contato" element={<Contato />} />
+        <Route path="sobreNos" element={<SobreNos />} />
+        <Route path="faq" element={<Faq />} />
       </Route>
     </Route>
   )

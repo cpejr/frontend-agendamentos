@@ -21,7 +21,7 @@ export default function Header() {
         <NavLink onClick={() => navigate("/creditos")}>Créditos</NavLink>
         <NavLink onClick={() => navigate("/contato")}>Contato</NavLink>
         <NavLink onClick={() => navigate("/sobreNos")}>Sobre Nós</NavLink>
-        <NavLink onClick={() => navigate("/faq")}>FAQ</NavLink>
+        <NavLink onClick={() => navigate("/Faq")}>FAQ</NavLink>
       </NavLinks>
 
       <BotaoEntrar onClick={() => navigate("/cadastro")}>ENTRAR</BotaoEntrar>

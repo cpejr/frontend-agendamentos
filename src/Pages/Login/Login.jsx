@@ -6,25 +6,27 @@ import ButtonGoogle from "../../components/commons/ButtonGoogle/ButtonGoogle";
 import { loginSchema } from "./utils";
 import { useEffect, useState } from "react";
 import CookieBanner from "../../components/commons/CookiesBanner/CookiesBanner";
-
+import { useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
     const [showCookieBanner, setShowCookieBanner] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
-    const consent = localStorage.getItem("cookieConsent");
-    if (!consent) {
-        setShowCookieBanner(true);
-    }
+        const consent = localStorage.getItem("cookieConsent");
+        if (!consent) {
+            setShowCookieBanner(true);
+        }
     }, []);
 
     const handleAcceptCookies = () => {
-    localStorage.setItem("cookieConsent", "true");
-    setShowCookieBanner(false);
-   }
+        localStorage.setItem("cookieConsent", "true");
+        setShowCookieBanner(false);
+    };
+
     const { mutate: loginUser, isLoading, error } = useLogin({
-        onSuccess: (data) => {
-            console.log("Login bem-sucedido:", data);
+        onSuccess: () => {
+            console.log("Login bem-sucedido!");
         },
         onError: (err) => {
             console.error("Erro no login:", err);
@@ -48,16 +50,15 @@ export default function LoginPage() {
         <Container>
             <Title>Acessar Conta</Title>
             <FormSubmit inputs={inputs} onSubmit={handleLogin} schema={loginSchema}>
-            {error && <p style={{ color: "red" }}>{error.message}</p>}
-                    <ButtonEnter type="submit" disabled={isLoading}>
-                        {isLoading ? "Carregando..." : "Entrar"}
-                    </ButtonEnter>
-                    <ButtonGoogle onClick={handleGoogleLogin} action="login" />
+                {error && <p style={{ color: "red" }}>{error.message}</p>}
+                <ButtonEnter type="submit" disabled={isLoading}>
+                    {isLoading ? "Carregando..." : "Entrar"}
+                </ButtonEnter>
+                <ButtonGoogle onClick={handleGoogleLogin} action="login" />
             </FormSubmit>
             <P> Não tem cadrasto? Se registre <a href="/register"> aqui </a> </P>
             {showCookieBanner && <CookieBanner onAccept={handleAcceptCookies} />}
         </Container>
     );
 }
-
 

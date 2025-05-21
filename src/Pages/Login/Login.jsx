@@ -12,12 +12,12 @@ export default function LoginPage() {
     const [showCookieBanner, setShowCookieBanner] = useState(false);
     const navigate = useNavigate();
 
-    useEffect(() => {
-        const consent = localStorage.getItem("cookieConsent");
-        if (!consent) {
-            setShowCookieBanner(true);
-        }
-    }, []);
+   useEffect(() => {
+    const consent = localStorage.getItem("cookieConsent");
+    if (consent !== "true") {
+        setShowCookieBanner(true);
+    }
+}, []);
 
     const handleAcceptCookies = () => {
         localStorage.setItem("cookieConsent", "true");

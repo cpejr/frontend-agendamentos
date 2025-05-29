@@ -5,7 +5,7 @@ import {
     createRoutesFromElements
 } from "react-router-dom";
 
-import { Login, Cadastro, Home, Creditos, NovoAgendamento, MeusAgendamentos } from "./Pages"
+import { Login, Cadastro, Home, Creditos, NovoAgendamento, MeusAgendamentos, Cliente } from "./Pages"
 import AppLayout from "./Layouts/AppLayout/AppLayout";
 
 
@@ -19,6 +19,7 @@ const router = createBrowserRouter(
                 <Route path="novoagendamento" element = {<NovoAgendamento />}/>
                 <Route path="meusagendamentos" element = {<MeusAgendamentos />}/>
                 <Route path="creditos" element = {<Creditos />}/>
+                <Route path="cliente" element={<Cliente />} />
             </Route>
         </Route>
     )

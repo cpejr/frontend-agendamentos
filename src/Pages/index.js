@@ -4,3 +4,4 @@ export {default as Home} from "./Home/Home"
 export {default as Login} from "./Login/Login"
 export {default as MeusAgendamentos} from "./Meus Agendamentos/MeusAgendamentos"
 export {default as NovoAgendamento} from "./Novo Agendamento/NovoAgendamento"
+export { default as Cliente } from "./Cliente/Cliente";

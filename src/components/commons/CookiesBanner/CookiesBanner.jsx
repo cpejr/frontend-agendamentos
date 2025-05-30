@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { BannerContainer, Text, AcceptButton } from "./styles";
+import { BannerContainer, Text, AcceptButton } from "./Styles";
 
 export default function CookieBanner({ onAccept }) {
     return (

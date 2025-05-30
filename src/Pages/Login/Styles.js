@@ -1,10 +1,24 @@
 import styled from "styled-components";
 
+export const RegisterLink = styled.span`
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+
+  &:hover {
+    opacity: 0.8;
+  }
+`;
 export const Container = styled.div`
       display: flex;
     align-items: center;
     height: 100vh;
     flex-direction: column
+`;
+
+export const ErrorMessage = styled.p`
+  color: red;
+  margin-bottom: 0.5rem;
 `;
 
 export const Title = styled.h1`

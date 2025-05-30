@@ -6,15 +6,15 @@ const baseURL = import.meta.env.VITE_BACKEND_URL;
 const api = axios.create({baseURL});
 
 api.interceptors.request.use(
-    (requisiçao) => {
-        const { token } = useAuthStore.getState();
-        console.log("Token atual:", token); 
-        if (!requisiçao.headers.Authorization && token) {
-            requisiçao.headers.Authorization = `Bearer ${token}`;
+    (config) => {
+        const { auth } = useAuthStore.getState();
+        console.log("Current auth", auth); 
+        if (!config.headers.Authorization && auth) {
+            config.headers.Authorization = `Bearer ${auth}`;
         }
-        return requisiçao;
+        return config;
     },
-    (erro) => Promise.reject(erro)
+    (error) => Promise.reject(error)
 );
 
 export default api;

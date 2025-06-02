@@ -12,11 +12,12 @@ export const Container = styled.div`
 
 export const ProfileSection = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
+  flex-direction: column; /* Coluna vertical */
+  align-items: center;    /* Centraliza horizontalmente */
   width: 40%;
   padding-left: 20px;
   margin-top: 40px;
+  margin-left: -80px; /* Move todo o bloco um pouco para a esquerda */
 `;
 
 export const AgendamentosSection = styled.div`
@@ -27,40 +28,76 @@ export const AgendamentosSection = styled.div`
 `;
 
 export const Avatar = styled.div`
-  width: 120px;
-  height: 120px;
-  background: linear-gradient(to bottom, #7bc6cc, #bef2c0);
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 9px solid #DDFFE0;
+  background: linear-gradient(to bottom, #A7CEFD, #DDFFE0);
   border-radius: 50%;
   margin-bottom: 20px;
   cursor: pointer;
+  box-shadow: 1px 5px 2px rgba(0, 0, 0, 0.2);
 `;
 
-export const EditIcon = styled.div`
+export const EditIcon = styled.button`
   position: absolute;
-  bottom: 4px;
-  right: 4px;
-  width: 26px;
-  height: 26px;
+  width: 50px;
+  height: 50px;
   background: white;
   border-radius: 50%;
-  border: 1px solid #ccc;
+  border: 4.5px solid #DDFFE0;
+  box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  z-index: 10;
+
+  ${({ position }) =>
+    position === 'avatar' &&
+    `
+    bottom: -5px;    /* Ajustado para descer um pouco */
+    right: -10px;     /* Ajustado para deslocar um pouco pra direita */
+  `}
+
+  ${({ position }) =>
+    position === 'nome' &&
+    `
+    bottom: -25px;
+    right: -25px;
+  `}
+`;
+
+export const NomeClienteWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+  margin: 12px 0 40px;
+  width: 100%;
+  max-width: 320px; /* Limita a largura */
 `;
 
 export const NomeCliente = styled.div`
   font-size: 28px;
   font-weight: bold;
-  background-color: #e6f4ec;
-  padding: 10px 20px;
+  border: 7px solid #DDFFE0;
+  background-color: white;
+  padding: 10px 80px 10px 20px; /* Espaço maior à direita para botão */
   border-radius: 12px;
-  margin: 12px 0;
-  white-space: nowrap; 
+  white-space: nowrap;
   text-align: center;
+  box-shadow: 1px 5px 2px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
 `;
 
 export const StarRating = styled.div`
-  color: orange;
-  font-size: 26px;
-  margin-top: 10px;
+  color: #FFC36E;
+  font-size: 50px;
+  margin-top: -25px;
 `;
 
 export const SectionTitle = styled.div`
@@ -77,22 +114,22 @@ export const AgendaList = styled.div`
 `;
 
 export const AgendaItem = styled.div`
-  background-color: #e6f4ec;
+  background-color: #F2FFF3;
   padding: 16px 24px;
   border-radius: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 20px;
+  font-weight: lighter; 
   width: 100%;
-  min-width: 600px; 
+  border: 7px solid #DDFFE0;
+  min-width: 600px;
+  box-shadow: 1px 5px 2px rgba(0, 0, 0, 0.2);
 `;
 
 export const Status = styled.span`
   font-weight: bold;
-  color: ${({ status }) =>
-    status === 'confirmado' ? 'green' :
-    status === 'cancelado' ? 'red' :
-    status === 'finalizado' ? 'gray' : 'black'};
+  color: #063D61;
   margin-left: 40px; 
 `;

@@ -12,12 +12,12 @@ export const Container = styled.div`
 
 export const ProfileSection = styled.div`
   display: flex;
-  flex-direction: column; /* Coluna vertical */
-  align-items: center;    /* Centraliza horizontalmente */
+  flex-direction: column; 
+  align-items: center;    
   width: 40%;
   padding-left: 20px;
   margin-top: 40px;
-  margin-left: -80px; /* Move todo o bloco um pouco para a esquerda */
+  margin-left: -80px; 
 `;
 
 export const AgendamentosSection = styled.div`
@@ -59,8 +59,8 @@ export const EditIcon = styled.button`
   ${({ position }) =>
     position === 'avatar' &&
     `
-    bottom: -5px;    /* Ajustado para descer um pouco */
-    right: -10px;     /* Ajustado para deslocar um pouco pra direita */
+    bottom: -5px;   
+    right: -10px;     
   `}
 
   ${({ position }) =>
@@ -76,7 +76,7 @@ export const NomeClienteWrapper = styled.div`
   display: inline-block;
   margin: 12px 0 40px;
   width: 100%;
-  max-width: 320px; /* Limita a largura */
+  max-width: 320px; 
 `;
 
 export const NomeCliente = styled.div`
@@ -84,7 +84,7 @@ export const NomeCliente = styled.div`
   font-weight: bold;
   border: 7px solid #DDFFE0;
   background-color: white;
-  padding: 10px 80px 10px 20px; /* Espaço maior à direita para botão */
+  padding: 10px 80px 10px 20px; 
   border-radius: 12px;
   white-space: nowrap;
   text-align: center;

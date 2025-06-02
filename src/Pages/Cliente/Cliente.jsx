@@ -13,7 +13,7 @@ import {
   AgendamentosSection
 } from './Styles';
 
-import ModalCliente from "../../components/ModalCliente/ModalCliente";
+
 import React, { useState } from 'react';
 
 const ClienteCard = () => {
@@ -121,9 +121,7 @@ const ClienteCard = () => {
             01/06/2025 - 16:00 <Status status="cancelado">CANCELADO</Status>
           </AgendaItem>
         </AgendaList>
-      </AgendamentosSection>
-
-      <ModalCliente open={modalOpen} onClose={() => setModalOpen(false)} />
+      </AgendamentosSection>    
     </Container>
   );
 };

@@ -1,13 +1,13 @@
 import { Container, ContainerCarousel } from "./Styles";
-import  DemoCarrossel  from "../../components/Carrossel/Carrossel";
-import Categorias from "../../components/Categorias/Categorias";
+import  DemoCarrossel  from "../../components/features/Carrossel/Carrossel";
+import Category from "../../components/features/Category/Category";
 import { Profissionais } from "../../components";
 
 function Home (){
 
 return(
     <Container>
-        <Categorias/>
+        <Category/>
         <Profissionais/>
     </Container>
 )

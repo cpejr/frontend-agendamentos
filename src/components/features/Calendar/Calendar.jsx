@@ -12,7 +12,7 @@ export default function CalendarFunction({
   dateFormat,
 }) {
   return (
-    <Container>
+    
       <StyledCalendar
         inline
         value={value}
@@ -29,7 +29,7 @@ export default function CalendarFunction({
           padding: "12px",
         }}
       />
-    </Container>
+   
   );
 }
 

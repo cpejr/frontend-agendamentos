@@ -35,17 +35,18 @@ export const StyledCalendar = styled(Calendar)`
 
   .p-datepicker-prev,
   .p-datepicker-next {
-    position: relative;
-    color: #003366 !important;
-    cursor: pointer !important;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-  }
+     position: relative;
+  color: #003366 !important;
+  cursor: pointer !important;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px; 
+  transition: background-color 0.3s ease;
+  border: none ;
+}
 
   .p-datepicker-prev:hover,
   .p-datepicker-next:hover {
@@ -75,20 +76,28 @@ export const StyledCalendar = styled(Calendar)`
     transition: background-color 0.3s ease;
   }
 
-  /* Hover com bolinha azul nas datas */
+ 
+.p-datepicker-calendar td {
+  width: 30px !important;    
+  height: 40px !important;   
+  padding: 0 !important;     
+  text-align: center;
+  vertical-align: middle;
+  
+  background-color: white !important;
+}
+
   .p-datepicker-calendar td:hover:not(.p-disabled):not(.p-highlight) {
-    background-color: #a0c8ff !important;
-    border-radius: 50% !important;
+    background-color: #3a78d7 !important;
+    border-radius: 100% !important;
     cursor: pointer;
   }
 
   .p-datepicker-calendar td.p-highlight {
-    background-color: #3a78d7 !important;
+    background-color:rgb(255, 255, 255) !important;
     border-radius: 50% !important;
-    color: white !important;
+    color: white !important;  
   }
 
-  .p-datepicker-calendar td.p-disabled {
-    color: #bbb !important;
-  }
+  
 `;

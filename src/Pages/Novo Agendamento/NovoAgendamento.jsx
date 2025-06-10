@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import CalendarFunction from "../../components/features/Calendar/Calendar"; // seu path correto
+import CalendarFunction from "../../components/features/Calendar/Calendar"; 
 import {
   Container,
   Wrapper,
@@ -10,8 +10,7 @@ import {
   ButtonContainer,
   ScheduleButton,
   MyAppointmentsButton,
-  HighlightedTitle,
-  HorizontalContainer,
+  Title,
 } from "./Styles";
 import CookieBanner from "../../components/commons/CookiesBanner/CookiesBanner";
 
@@ -22,16 +21,8 @@ export default function NewAppointmentPage() {
   const navigate = useNavigate();
 
   const timeSlots = [
-    "10:00",
-    "10:30",
-    "10:45",
-    "11:00",
-    "11:30",
-    "13:00",
-    "13:30",
-    "15:00",
-    "16:00",
-    "16:30",
+    "10:00", "10:30", "10:45", "11:00", "11:30",
+    "13:00", "13:30", "15:00", "16:00", "16:30",
   ];
 
   const handleTimeSelect = (time) => {
@@ -60,34 +51,35 @@ export default function NewAppointmentPage() {
 
   return (
     <Container>
-      <HorizontalContainer>
-        <HighlightedTitle>Novo agendamento</HighlightedTitle>
-        <HighlightedTitle>Horários</HighlightedTitle>
-      </HorizontalContainer>
-
       <Wrapper>
-        <CalendarContainer>
-          <CalendarFunction
-            value={selectedDate}
-            onChange={setSelectedDate}
-            placeholder="Selecione a data"
-            dateFormat="dd/mm/yy"
-            color="#007BFF"
-            error={false}
-          />
-        </CalendarContainer>
+        <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+          <Title>Novo agendamento</Title>
+          <CalendarContainer>
+            <CalendarFunction
+              value={selectedDate}
+              onChange={setSelectedDate}
+              placeholder="Selecione a data"
+              dateFormat="dd/mm/yy"
+              color="#007BFF"
+              error={false}
+            />
+          </CalendarContainer>
+        </div>
 
-        <TimeSlotsContainer>
-          {timeSlots.map((slot) => (
-            <TimeSlotButton
-              key={slot}
-              onClick={() => handleTimeSelect(slot)}
-              selected={selectedTime === slot}
-            >
-              {slot}
-            </TimeSlotButton>
-          ))}
-        </TimeSlotsContainer>
+        <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+          <Title>Horários</Title>
+          <TimeSlotsContainer>
+            {timeSlots.map((slot) => (
+              <TimeSlotButton
+                key={slot}
+                onClick={() => handleTimeSelect(slot)}
+                selected={selectedTime === slot}
+              >
+                {slot}
+              </TimeSlotButton>
+            ))}
+          </TimeSlotsContainer>
+        </div>
       </Wrapper>
 
       <ButtonContainer>

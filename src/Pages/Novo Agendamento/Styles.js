@@ -15,15 +15,17 @@ export const Wrapper = styled.div`
   gap: 60px;
   flex-wrap: nowrap;
   margin-bottom: 20px;
+  align-items: flex-start;
 `;
-
 export const CalendarContainer = styled.div`
   background-color: #e8f4fd;
   padding: 20px;
   border-radius: 15px;
-  margin: 10px;
-  width:  300px;
+  
+  width: 400px;
+  
 `;
+
 
 export const TimeSlotsContainer = styled.div`
   background-color: #e8f4fd;
@@ -37,7 +39,7 @@ export const TimeSlotsContainer = styled.div`
   overflow-y: auto;
 `;
 
-export const HighlightedTitle = styled.h2`
+export const Title = styled.h2`
   margin-top: 5%;
   margin-bottom: 3%;
   background: linear-gradient(to right, #dbf7dc, #a7d8ff);
@@ -55,7 +57,7 @@ export const HighlightedTitle = styled.h2`
 `;
 
 export const TimeSlotButton = styled.button`
-  background-color: ${({ selected }) => (selected ? "#74c0fc" : "white")};
+  background-color: ${({ selected }) => (selected ? "#2a81d0" : "white")};
   border: none;
   border-radius: 15px;
   padding: 10px 15px;
@@ -64,9 +66,10 @@ export const TimeSlotButton = styled.button`
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: ${({ selected }) => (selected ? "#4dabf7" : "#f1f3f5")};
+    background-color: ${({ selected }) => (selected ? "#1971c2" : "#c6defe")};
   }
 `;
+
 
 export const ButtonContainer = styled.div`
   margin-top: 20px;
@@ -106,7 +109,7 @@ export const MyAppointmentsButton = styled.button`
 
 export const HorizontalContainer = styled.div`
   display: flex;
-  gap: 150px; 
+  gap: 50px; 
   align-items: center; 
 `;
 

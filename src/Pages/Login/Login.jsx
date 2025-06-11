@@ -1,14 +1,22 @@
-import { Container, Title, P, ConteinerForm } from "./Styles";
+import { Container, Title, P } from "./Styles";
 import AuthForm from "../../components/features/Authform/Authform";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+    const navigate = useNavigate();
     return (
         <Container>
             <Title>ACESSAR CONTA</Title>
-            <ConteinerForm> 
-                  <AuthForm isRegister={false} />
-            </ConteinerForm>
-            <P> Não tem uma conta? <a href="/register">Crie sua conta aqui</a></P>         
+             <AuthForm isRegister={false} />
+            <P>
+                Don't have an account?
+                <a 
+                    onClick={() => navigate("/register")} // Navegação via onClick
+                    style={{ cursor: "pointer", textDecoration: "underline" }}
+                >
+                    Sign up here
+                </a>
+                 </P>         
         </Container>
     );
 }

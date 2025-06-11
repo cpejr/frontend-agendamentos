@@ -19,7 +19,7 @@ export const IconWrapper1 = styled.div`
 
 export const IconWrapper3 = styled.div`
   position: absolute;
-  top: 72%;
+  top: 76%;
   right: 12%;
 `;
 

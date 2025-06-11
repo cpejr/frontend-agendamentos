@@ -1,5 +1,5 @@
 import axios from "axios";
-import useAuthStore from "../../storage/auth";
+import useAuthStore from "../store/auth";
 
 const baseURL = import.meta.env.VITE_BACKEND_URL; 
 

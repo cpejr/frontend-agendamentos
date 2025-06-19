@@ -9,7 +9,15 @@ import {
   browserLocalPersistence,
 } from "firebase/auth";
 
-import { firebaseConfig } from "./firebaseConfig";
+const firebaseConfig = {
+  apiKey: "AIzaSyAN5WI7pBguIzl39GM3Qe_eS5DJc6URGiQ",
+  authDomain: "agendamento-7c7d7.firebaseapp.com",
+  projectId: "agendamento-7c7d7",
+  storageBucket: "agendamento-7c7d7.firebasestorage.app",
+  messagingSenderId: "827742797379",
+  appId: "1:827742797379:web:c10a80af3370b67a591ef6",
+  measurementId: "G-SRRRCD9S47"
+};
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);

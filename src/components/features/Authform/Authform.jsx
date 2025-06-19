@@ -1,16 +1,13 @@
 import { useState } from "react";
+import { useGoogleLogin } from "../../../services/useGoogleLogin"; // ajuste o caminho se necessário
 import Input from "../../commons/Inputs/Inputs";
 import Button from "../../commons/ButtonCount/ButtonCount";
 import BotaoGoogle from "../../commons/ButtonGoogle/ButtonGoogle";
-import { ErrorMessage, FormContainer, InputWrapper, IconWrapper1, IconWrapper2, divButton,IconWrapper3 } from "./Styles";
+import { ErrorMessage, FormContainer, InputWrapper, IconWrapper1, IconWrapper2, IconWrapper3 } from "./Styles";
 import { Eye, EyeOff } from 'lucide-react';
 
-const handleGoogleLogin = () => {
-    alert("Login com Google ainda não implementado!");
-};
-
-
 export default function AuthForm({ isRegister }) {
+    const { logGoogleUser, isLoading } = useGoogleLogin();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -98,7 +95,11 @@ export default function AuthForm({ isRegister }) {
                 {error && <ErrorMessage>{error}</ErrorMessage>}
             </InputWrapper>
             <divButton>
-                <BotaoGoogle onClick={handleGoogleLogin} text={isRegister ? "Cadastrar com o Google" : "Logar com o Google"} />
+                <BotaoGoogle
+                    onClick={logGoogleUser}
+                    disabled={isLoading}
+                    text={isRegister ? "Cadastrar com o Google" : "Logar com o Google"}
+                    />
             </divButton>
             <Button type="submit">{isRegister ? "CADASTRAR" : "ENTRAR"}</Button>
         </FormContainer>
